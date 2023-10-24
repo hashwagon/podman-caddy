@@ -1,0 +1,38 @@
+# Caddy compose file
+#
+# Reference: https://caddyserver.com/docs/getting-started
+#
+# Important: Don't forget to create caddy network!
+# $ podman network create caddy
+#
+# Virtual host compose.yml contents:
+# networks:
+#   default:
+#     external:
+#       name: caddy
+#
+version: "3.7"
+
+services:
+
+  caddy:
+    image: docker.io/caddy:alpine
+    networks:
+      - caddy
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - tz="America/Denver"
+    volumes:
+      - /podman/caddyfile.d/:/etc/caddy/
+      - caddy_data:/data
+
+volumes:
+  caddy_data:
+
+networks:
+  caddy:
+    external:
+      name: caddy
