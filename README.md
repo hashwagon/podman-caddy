@@ -1,5 +1,5 @@
 # Podman Caddy
-This is a `podman-compose` turn-key solution that provides [Caddy](https://caddyserver.com/) reverse proxy and automatic [Let's Encrypt HTTPS](https://letsencrypt.org/) configuration functionality, all while playing nice in a [rootless podman environment](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md).
+This is a `podman-compose` ([About Podman](https://docs.podman.io/en/latest/)) turn-key solution that provides [Caddy](https://caddyserver.com/) reverse proxy and automatic [Let's Encrypt HTTPS](https://letsencrypt.org/) configuration functionality, all while playing nice in a [rootless podman environment](https://github.com/containers/podman/blob/main/docs/tutorials/rootless_tutorial.md).
 
 # Configuration
 
